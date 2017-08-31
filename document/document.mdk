@@ -1,0 +1,24 @@
+Title         : The Hanover Pipeline
+Author        : Kirk Olynyk
+Logo          : True
+
+[TITLE]
+
+# Introduction
+
+The Hanover Pipeline is a set of Python scripts files that form the software glue for the Hanover project.
+The Hanover project, or Hanover for short, is an ongoing project 
+headed by Chris Quirk and Hoifong Poon. The purpose of Hanover
+is to use computers to read and understand medical literature and to use this data to help the
+medical community. Over time, many C\# programs have been developed to address different
+parts of the process. During the development stage each step in the process of understanding the
+medical documents was done by hand. Each step consist of transforming one set of files
+to another using a set of parameters entered at the command line.
+
+* Read the [reference manual].
+* Explore the upper-right toolbox menu to discover how Markdown works. 
+* `Alt-Q` reformats the current paragraph.
+
+Enjoy!
+
+[reference manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html  "Madoko reference manual"
