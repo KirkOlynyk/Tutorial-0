@@ -1,0 +1,46 @@
+Title         : The Hanover Pipeline
+Author        : Kirk Olynyk
+Logo          : True
+Package: amsmath
+
+[TITLE]
+
+# Hanover
+
+The goal of the _Hanover_ project is to provide tools to the
+medical community to help find effective treatments for cancer.
+To do this we create software to process medical literature that
+has been published online. Here process means download, scan, 
+and digest. To make this process easier for the user we provide
+a set of Python scripts which we call the _Pipeline_.
+
+# Theory
+
+Let $n$ be size of the set of all _interesting_ words. I shall refer to this as the _universal_ set.
+Within each document we want to detect the presence of
+subsets of these words within _close_ proximity of each other. A natural representation
+of any subset in the set of all words is to assign to each word in the universal
+set an integer in the range $0 .. n-1$ where $n$ is the size of the universal set
+of words. Any subset is representable as an $n$-bit binary number where
+the presence of 1 at the i'th bit means that the i'th words is an element of the subset. 
+~ Equation {[#eq-1]; caption: Mapping from a section of a document to the set of all words subsets}
+f: \chi \to \mathbb{R}^n
+~
+
+## Probability Fitting
+
+~ Equation {[#eq-2]; caption: TBD}
+P(y=1 | x; \theta) = 
+\frac{ \exp(\theta_1 \cdot f(x))}
+{ \exp(\theta_0 \cdot f(x)) +  \exp(\theta_1 \cdot f(x))}
+~
+
+where $\theta_k \in \mathbb{R}^n$.
+
+# The Pipeline
+
+The _Pipeline_ is a sequence of steps in the process of creating a model.
+Each step is the application of a function to some input data the the result
+is some output data. The data is one of a few well defined formats. The most
+general data format on the disk is _YAML_ files. These can be read and written
+in both C\# and Python.
